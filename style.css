@@ -1,0 +1,145 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+nav{
+    background-color: #a52a2a;
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+}
+nav img {
+    width: 30px;
+    height: 30px;
+}
+nav h3{
+    color: white;
+    letter-spacing: 2px;
+    margin-left: 1vw;
+
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1024px;
+    margin: 50px auto;
+}
+
+.line{
+    background-color: #a52a2a;
+    width: 0;
+    height: 3px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    position: absolute;
+    transition: width 1s ease-in-out;
+    /* margin: auto; */
+}
+
+.gameContainer {
+    width: 80%;
+    aspect-ratio: 1;
+    position: relative;
+}
+
+.game{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3,1fr);   
+    width: 100%; 
+    height: 100%;
+}
+
+.box{
+    display: flex;
+    align-items: center;
+    justify-content: center ;
+    border: 2px solid black;
+    font-size: 8vw;
+    cursor: pointer;
+}
+.box:hover{
+    background-color: #ecf7f8;
+}
+
+.top0{
+    border-top: none;
+}
+.left0{
+    border-left: none;
+}
+.right0{
+    border-right: none;
+}
+.button0{
+    border-bottom: none;
+}
+
+.image{
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+.info{
+    margin-left: 5vw;
+}
+
+.result{
+    font-size: 2rem;
+    font-weight: 600;
+    color: #24a909;
+}
+
+.resetBtn{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: white;
+    background-color: #a52a2a;
+    cursor: pointer;
+    margin: 3vh;
+}
+
+@media screen and (max-height:1024px) {
+    .info h1{
+        font-size: 3rem;
+    }
+    
+    .gameContainer{
+        width: 40%;
+        aspect-ratio: 1;
+    }
+
+    .result{
+        font-size: 2rem;
+        font-weight: 600;
+    }
+    .resetBtn{
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 800px ) {
+    .container{
+        flex-wrap: wrap;
+        row-gap: 8vh;
+        margin: 40px 0;
+    }
+    .gameContainer{
+        width: 80%;
+        aspect-ratio: 1;
+    }
+    .game{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3,1fr);   
+    }
+}
+
